@@ -50,7 +50,8 @@ PyAutoGUI = "^0.9"
 
 # --- cli ---
 typer = "^0.7"
-keyboard = "^0.13"
+# TODO(amir): leave it out for now due to mac security issues
+# keyboard = "^0.13"
 
 
 [tool.poetry.dev-dependencies]
