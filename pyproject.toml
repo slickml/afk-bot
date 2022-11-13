@@ -1,0 +1,130 @@
+####################################################################################################
+####### PLEASE READ THE CONTRIBUTING DOCUMENT FIRST BEFORE APPLYING ANY CHANGES TO THIS FILE #######
+########################################### SLICKML TEAM ###########################################
+####################################################################################################
+
+[tool.poetry]
+name = "afk-bot"
+version = "0.1.0"
+description = "A bot for the away from keyboard times"
+license = "MIT"
+authors = [
+    "Amirhessam Tahmassebi <admin@slickml.com>",
+]
+maintainers = [
+    "Amirhessam Tahmassebi <admin@slickml.com>",
+]
+readme = "README.md"
+homepage = "https://www.slickml.com"
+repository = "https://github.com/slickml/afk-bot"
+documentation = "https://github.com/slickml/afk-bot"
+keywords = ["afk", "afk-bot"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+packages = [
+    { include = "afk_bot", from = "src" },
+]
+include = ["src/afk_bot", "*.md"]
+exclude = ["assets", "tests"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+
+# --- gui-objects ---
+PyAutoGUI = "^0.9"
+
+# --- cli ---
+typer = "^0.7"
+keyboard = "^0.13"
+
+
+[tool.poetry.dev-dependencies]
+
+# --- package-management ---
+pip = "^22.3"
+
+# --- task-management ---
+poethepoet = "^0.16"
+
+# --- testenv-management ---
+tox = "^3.27"
+
+# --- formatting ---
+add-trailing-comma = "^2.2"
+isort = "^5.10"
+black = "^22.10"
+
+# --- linting ---
+flake8 = "^5.0"
+flake8-commas = "^2.1"
+flake8-annotations = "^2.9"
+flake8-comprehensions = "^3.10"
+flake8-eradicate = "^1.2"
+flake8-simplify = "^0.19"
+flake8-tidy-imports = "^4.8"
+flake8-type-checking = "^2.1"
+flake8-typing-imports = "^1.12"
+flake8-use-fstring = "^1.4"
+pep8-naming = "^0.13"
+mypy = "^0.990"
+
+# --- unit-testing ---
+pytest = "^7.2"
+pytest-cov = "^4.0"
+pytest-mock = "^3.10"
+mock = "^4.0"
+coverage = "^6.5"
+assertpy = "^1.1"
+
+# --- docs ----
+sphinx = "^5.3"
+sphinx-autoapi = "^1.9"
+sphinx_design = "^0.3"
+myst-parser = "^0.18"
+furo = "^2022.9"
+
+
+[build-system]
+requires = ["poetry-core>=1.3.2"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+afk-bot = "afk_bot.cli:main"
+
+
+# -- try `poe --help` for options
+[tool.poe.tasks]
+add-trailing-comma = { cmd = "poetry run add-trailing-comma --exit-zero-even-if-changed src/**/*.py tests/**/*.py", help = "Format code style via add-trailing-comma" }
+black = { cmd = "poetry run black --line-length 100 .", help = "Format code style via black" }
+isort = { cmd = "poetry run isort --profile black .", help = "Sort imported libraries via isort" }
+flake8 = { cmd = "poetry run flake8 --verbose --benchmark --color always --config .flake8 .", help = "Lint code via flake8" }
+mypy = { cmd = "poetry run mypy --verbose --config-file mypy.ini .", help = "Lint types via mypy" }
+test = { cmd = "poetry run python -m pytest --cov=src --cov-report=term --cov-report=html --cov-report=xml --cov-config=.coveragerc --tb=short -ra -v", help = "Run unit-tests via pytest" }
+tox = { cmd = "poetry run tox -c tox.ini .", help = "Test environments via tox" }
+format = [
+    { ref = "add-trailing-comma" },
+    { ref = "isort" },
+    { ref = "black" },
+]
+check = [
+    { cmd = "poe black --check" },
+    { cmd = "poe isort --check" },
+    { ref = "flake8" },
+    { ref = "mypy" },
+]
