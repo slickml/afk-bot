@@ -1,12 +1,15 @@
+<div align="center">
+
 [![build](https://github.com/slickml/afk-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/slickml/afk-bot/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/slickml/afk-bot/branch/master/graph/badge.svg?token=Z7XP51MB4K)](https://codecov.io/gh/slickml/afk-bot)
 [![license](https://img.shields.io/github/license/slickml/afk-bot)](https://github.com/slickml/afk-bot/blob/master/LICENSE/)
-[![downloads](https://pepy.tech/badge/akf-bot)](https://pepy.tech/project/afk-bot)
+[![downloads](https://pepy.tech/badge/afk-bot)](https://pepy.tech/project/afk-bot)
 ![pypi_version](https://img.shields.io/pypi/v/afk-bot)
 ![python_version](https://img.shields.io/pypi/pyversions/afk-bot)
+[![slack_invite](https://badgen.net/badge/Join/SlickML%20Slack/purple?icon=slack)](https://www.slickml.com/slack-invite)
+![twitter_url](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FSlickML)
 
-
-
+</div>
 <p align="center">
   <a href="https://github.com/slickml/afk-bot">
     <img src="https://raw.githubusercontent.com/slickml/afk-bot/master/assets/logo.png" width="250"></img>
