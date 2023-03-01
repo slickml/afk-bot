@@ -1,7 +1,7 @@
 <div align="center">
 
 [![build](https://github.com/slickml/afk-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/slickml/afk-bot/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/slickml/afk-bot/branch/master/graph/badge.svg?token=Z7XP51MB4K)](https://codecov.io/gh/slickml/afk-bot)
+[![codecov](https://codecov.io/gh/slickml/afk-bot/graph/badge.svg?token=Z7XP51MB4K)](https://codecov.io/gh/slickml/afk-bot)
 [![license](https://img.shields.io/github/license/slickml/afk-bot)](https://github.com/slickml/afk-bot/blob/master/LICENSE/)
 [![downloads](https://pepy.tech/badge/afk-bot)](https://pepy.tech/project/afk-bot)
 ![pypi_version](https://img.shields.io/pypi/v/afk-bot)
