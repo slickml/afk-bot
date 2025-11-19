@@ -6,7 +6,7 @@
 [![downloads](https://pepy.tech/badge/afk-bot)](https://pepy.tech/project/afk-bot)
 ![pypi_version](https://img.shields.io/pypi/v/afk-bot)
 ![python_version](https://img.shields.io/pypi/pyversions/afk-bot)
-[![slack_invite](https://badgen.net/badge/Join/SlickML%20Slack/purple?icon=slack)](https://www.slickml.com/slack-invite)
+[![slack_invite](https://img.shields.io/badge/slickml-slack-purple?logo=slack)](https://www.slickml.com/slack-invite)
 ![twitter_url](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FSlickML)
 
 </div>
